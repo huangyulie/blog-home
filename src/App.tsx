@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.scss';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <div className='header-left'>弥勒Blog</div>
+        <div className='header-mid'></div>
+        <div className='header-right'>
+          <div className='header-big'>
+            <div className='header-big-l'>
+              <div className='header-right-home'>首页</div>
+              <div className='header-right-blog'>博客</div>
+              <div className='header-right-music'>音乐</div>
+              <div className='header-right-game'>游戏</div>
+              <div className='header-right-login'>登录</div>
+            </div>
+          </div>
+          <div className='header-small'>
+            <div className='header-small-l'>样式</div>
+          </div>
+        </div>
       </header>
+      <article>article</article>
+      <footer>footer</footer>
     </div>
-  );
+  )
 }
-
-export default App;
