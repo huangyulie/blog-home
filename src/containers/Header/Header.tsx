@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom';
 import {AlignRightOutlined ,RedditOutlined,HomeOutlined,ReadOutlined,PlaySquareOutlined,SmileOutlined,LoginOutlined} from '@ant-design/icons';
-
+import './scss/Header.scss';
 
 export default function Header() {
     return (

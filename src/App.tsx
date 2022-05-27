@@ -3,7 +3,7 @@ import './App.scss';
 import Header from './containers/Header/Header';
 // import {Routes,Route} from 'react-router-dom'
 import Routes from './route/route'
-const Home = require('./public/video/home.mp4');
+const Home = require('./public/video/hone.mp4');
 
 export default function App() {
   return (

@@ -2,7 +2,28 @@ $mainColor: gray;
 $mainFontSize: 20px;
 
 body {
-    overflow: hidden;
+    overflow-y: overlay;
+}
+
+/*整个滚动条*/
+::-webkit-scrollbar {
+    position: absolute;
+    width: 10px;
+}
+
+/*定义滚动条轨道*/
+
+::-webkit-scrollbar-track {
+
+    background-color: transparent;
+
+}
+
+/*定义滑块*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: skyblue;
 }
 
 video {
@@ -27,9 +48,9 @@ source {
     width: auto;
 }
 
-.active{
+.active {
     background-color: #fff;
-    color: black!important;
+    color: black !important;
 }
 
 header {
@@ -63,7 +84,6 @@ header {
                 display: flex;
 
                 a {
-                    font-weight: 700;
                     color: rgb(255, 255, 255);
                     text-decoration: none;
                     position: relative;
@@ -87,7 +107,7 @@ header {
                         opacity: 1;
                         transform: translate(-50%) scaleX(1);
                     }
-                    
+
                 }
             }
 
