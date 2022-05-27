@@ -1,29 +1,21 @@
 import React from 'react'
 import './App.scss';
+import Header from './containers/Header/Header';
+// import {Routes,Route} from 'react-router-dom'
+import Routes from './route/route'
+const Home = require('./public/video/home.mp4');
 
 export default function App() {
   return (
     <div>
-      <header>
-        <div className='header-left'>弥勒Blog</div>
-        <div className='header-mid'></div>
-        <div className='header-right'>
-          <div className='header-big'>
-            <div className='header-big-l'>
-              <div className='header-right-home'>首页</div>
-              <div className='header-right-blog'>博客</div>
-              <div className='header-right-music'>音乐</div>
-              <div className='header-right-game'>游戏</div>
-              <div className='header-right-login'>登录</div>
-            </div>
-          </div>
-          <div className='header-small'>
-            <div className='header-small-l'>样式</div>
-          </div>
-        </div>
-      </header>
-      <article>article</article>
+      <Header />
+      <article>
+        <Routes/>
+      </article>
       <footer>footer</footer>
+      <video id="v1" autoPlay loop muted>
+        <source src={Home} type="video/mp4" />
+      </video>
     </div>
   )
 }

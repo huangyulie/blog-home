@@ -1,0 +1,39 @@
+.Login {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    // background-color: red;
+
+    .Login-cicle {
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 40vw;
+        height: 40vw;
+        background-color: rgba(0,0,0,0.6);
+        animation: Login 2s forwards;
+        top: 50%;
+        margin-top: -20vw;
+        .login-form{
+            margin: auto;
+            flex: 1;
+        }
+    }
+}
+
+
+
+@keyframes Login {
+    0% {
+        left: 100vw;
+        transform: rotate(0deg);
+        margin-left: 0px;
+    }
+
+    100% {
+        left: 50vw;
+        transform: rotate(-360deg);
+        margin-left: -20vw;
+    }
+}

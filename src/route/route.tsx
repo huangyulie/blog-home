@@ -1,13 +1,10 @@
 import { useRoutes } from "react-router-dom";
-import Hello1 from '../components/Home/Home1';
-import Hello2 from '../components/Home/Home2';
-import Hello3 from '../components/Home/Home3'
+import Login from "../containers/login/Login";
 
-export default function(){
+const useRoute = function(){
     return useRoutes([
-        {path:'/Home1',element:<Hello1/>},
-        {path:'/Home2',element:<Hello2/>,children:[
-            {path:"Home3",element:<Hello3/>}
-        ]},
-    ])
-}
+        {path:'/login',element:<Login/>}
+    ])// eslint-disable-next-line
+}// eslint-disable-next-line
+
+export default useRoute;

@@ -1,17 +1,50 @@
 $mainColor: gray;
+$mainFontSize: 20px;
+
+body {
+    overflow: hidden;
+}
+
+video {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    // /*加滤镜*/
+    /*filter: blur(15px); //背景模糊设置 */
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter:grayscale(100%); //背景灰度设置*/
+    z-index: -11
+}
+
+source {
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.active{
+    background-color: #fff;
+    color: black!important;
+}
 
 header {
+    color: rgb(255, 255, 255);
     user-select: none;
     display: flex;
     width: 100%;
-    height: 50px;
-    font-size: 25px;
-    line-height: 50px;
+    height: 5vh;
+    font-size: $mainFontSize;
+    line-height: 5vh;
+    background-color: rgba(5, 58, 59, 0.3);
 
     .header-left {
-        width: 200px;
-        height: 50px;
-        margin-left: 50px;
+        font-size: 30px;
+        transition: all 1s;
     }
 
     .header-mid {
@@ -20,17 +53,19 @@ header {
 
     .header-right {
         width: 500px;
-        height: 50px;
+        height: 5vh;
         background-color: transparent;
-        margin-right: 100px;
+        position: relative;
 
         .header-big {
-            // display: flex;
 
             .header-big-l {
                 display: flex;
 
-                div {
+                a {
+                    font-weight: 700;
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
                     position: relative;
                     flex: 1;
                     cursor: pointer;
@@ -40,10 +75,10 @@ header {
                         content: "";
                         position: absolute;
                         left: 50%;
-                        bottom: -2px;
+                        bottom: 1px;
                         width: 100%;
                         opacity: 0;
-                        border-bottom: 2px solid #646464;
+                        border-bottom: 5px solid #fcfcfc;
                         transform: translate(-50%) scaleX(0);
                         transition: .2s ease-in-out;
                     }
@@ -52,35 +87,64 @@ header {
                         opacity: 1;
                         transform: translate(-50%) scaleX(1);
                     }
+                    
                 }
             }
 
         }
-        .header-small{
-            display: none;
-            .header-small-l{
-                display: none;
+
+        .header-small {
+            .header-small-l {
+                position: absolute;
+                right: 0;
+                height: 50px;
+                width: 50px;
             }
         }
     }
 }
 
 @media screen and (min-width:1201px) {
+    .header-right {
+        margin-right: 100px;
+    }
+
+    .header-left {
+        width: 200px;
+        height: 50px;
+        margin-left: 50px;
+    }
+
     .header-big {
         display: block;
     }
-    .header-small{
+
+    .header-small {
         display: none;
     }
 
     header {
-        background-color: blue;
+        // background-color: blue;
     }
 }
 
 @media screen and (max-width:1200px) {
+    .header-right {
+        margin-right: 100px;
+    }
+
+    .header-left {
+        width: 200px;
+        height: 50px;
+        margin-left: 50px;
+    }
+
     .header-big {
         display: block;
+    }
+
+    .header-small {
+        display: none;
     }
 
     header {
@@ -90,8 +154,22 @@ header {
 }
 
 @media screen and (max-width:992px) {
+    .header-right {
+        margin-right: 0px;
+    }
+
+    .header-left {
+        width: 200px;
+        height: 50px;
+        margin-left: 0;
+    }
+
     .header-big {
         display: none;
+    }
+
+    .header-small {
+        display: block;
     }
 
     header {
@@ -101,8 +179,22 @@ header {
 
 
 @media screen and (max-width:768px) {
+    .header-right {
+        margin-right: 0px;
+    }
+
+    .header-left {
+        width: 200px;
+        height: 50px;
+        margin-left: 0;
+    }
+
     .header-big {
         display: none;
+    }
+
+    .header-small {
+        display: block;
     }
 
     header {
