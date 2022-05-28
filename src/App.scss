@@ -52,6 +52,11 @@ source {
     background-color: #fff;
     color: black !important;
 }
+.Header{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
 
 header {
     color: rgb(255, 255, 255);

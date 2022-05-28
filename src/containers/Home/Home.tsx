@@ -10,7 +10,6 @@ export default function Home() {
         const width = window.scrollX
         const height = window.scrollY
         setWindowSize({ width, height })
-        // console.log(height)
     }
  
     useEffect(() => {
@@ -38,11 +37,11 @@ export default function Home() {
         <div className='Home-page' id='page'>
             <div className="Home-blog">弥勒Miroku的博客</div>
             <div className='Home-show'>
-                <div className='Home-show-blog'>1</div>
-                <div className='Home-show-blog'>1</div>
-                <div className='Home-show-blog'>1</div>
-                <div className='Home-show-blog'>1</div>
-                <div className='Home-show-blog'>1</div>
+                <div className='Home-show-blog'>
+                    <div className='show'>
+                        <img src="http://150.158.23.19:4000/img/img-1652782614045.png" alt="藐视" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

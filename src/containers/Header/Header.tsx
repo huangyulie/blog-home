@@ -5,7 +5,7 @@ import './scss/Header.scss';
 
 export default function Header() {
     return (
-        <div>
+        <div className='Header'>
             <header>
                 <div className='header-left'><RedditOutlined />弥勒Blog</div>
                 <div className='header-mid'></div>
