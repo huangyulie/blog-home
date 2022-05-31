@@ -53,7 +53,9 @@ source {
     color: black !important;
 }
 .Header{
-    position: fixed;
+    position: sticky;
+    height: 5vw;
+    top: 0vw;
     z-index: 999;
     width: 100%;
 }
